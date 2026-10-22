@@ -1,0 +1,13 @@
+{
+  "name": "Alstone_Hauly Wattsapp",
+  "short_name": "Alstone Hauly",
+  "description": "Internet messaging for Alstone_Hauly users",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#edf3f1",
+  "theme_color": "#075e54",
+  "icons": [
+    {"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}

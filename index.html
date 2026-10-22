@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#075e54">
+  <meta name="description" content="Alstone_Hauly Wattsapp internet messaging app">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <title>Alstone_Hauly Wattsapp</title>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-mark">AH</div>
+    <div><h1>Alstone_Hauly</h1><p>Wattsapp Messenger</p></div>
+    <span id="status" class="status">Not connected</span>
+  </header>
+
+  <main>
+    <section id="setup" class="panel">
+      <h2>Connect your account</h2>
+      <p class="muted">Enter your Supabase project settings to enable secure phone-number login and online messaging.</p>
+      <label for="supabaseUrl">Supabase project URL</label>
+      <input id="supabaseUrl" type="url" placeholder="https://your-project.supabase.co" autocomplete="url">
+      <label for="supabaseKey">Supabase publishable/anon key</label>
+      <input id="supabaseKey" type="text" placeholder="Public anon key (never a service_role key)" autocomplete="off">
+      <button id="saveConfig">Connect</button>
+      <p class="hint">These are public client settings. Never put a service_role key, Meta access token, or other secret in this app.</p>
+    </section>
+
+    <section id="auth" class="panel hidden">
+      <h2>Sign in with your phone</h2>
+      <p class="muted">Use international format, for example +2547XXXXXXXX. SMS delivery must be enabled in Supabase.</p>
+      <label for="phone">Phone number</label>
+      <input id="phone" type="tel" placeholder="+2547XXXXXXXX" autocomplete="tel">
+      <button id="sendOtp">Send verification code</button>
+      <label for="otp">Verification code</label>
+      <input id="otp" inputmode="numeric" autocomplete="one-time-code" placeholder="Enter SMS code">
+      <button id="verifyOtp" class="secondary">Verify and sign in</button>
+      <button id="signOut" class="link-button hidden">Sign out</button>
+      <p id="authMessage" class="hint" role="status"></p>
+    </section>
+
+    <section id="messenger" class="panel hidden">
+      <div class="messenger-head">
+        <div><h2>Messages</h2><p id="signedInAs" class="muted"></p></div>
+        <button id="refresh" class="secondary small">Refresh</button>
+      </div>
+      <label for="recipient">Recipient phone number</label>
+      <input id="recipient" type="tel" placeholder="+2547XXXXXXXX">
+      <p class="hint">The recipient must also register in this app before you can chat with them.</p>
+      <div id="messages" class="messages" aria-live="polite">
+        <p class="empty">Sign in and choose a recipient to load messages.</p>
+      </div>
+      <form id="sendForm" class="send-row">
+        <input id="messageText" maxlength="4000" placeholder="Write a message…" autocomplete="off" required>
+        <button type="submit" aria-label="Send message">Send</button>
+      </form>
+      <p id="chatMessage" class="hint" role="status"></p>
+    </section>
+    <section class="footer-note">
+      <strong>Early version</strong>
+      <p>Messages in this version are for Alstone_Hauly users only. WhatsApp users are reached only after the official Meta Business Platform integration is configured.</p>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<rect width="512" height="512" rx="112" fill="#075e54"/>
+<path d="M110 390l24-83a170 170 0 1 1 63 67z" fill="#25d366"/>
+<path d="M196 340l-22 34 38-12a130 130 0 1 0-30-28z" fill="#fff"/>
+<path d="M207 164c-8-5-17-2-22 7-10 17-4 41 18 66 23 28 47 45 76 52 19 5 34-5 41-18 4-8 2-13-5-17l-27-13c-7-3-11-2-16 5l-8 10c-3 4-7 4-13 1-13-6-28-20-35-32-3-5-2-9 2-13l7-8c4-5 4-10 1-16z" fill="#075e54"/>
+<text x="256" y="452" text-anchor="middle" font-family="Arial,sans-serif" font-size="35" font-weight="bold" fill="#fff">AH</text>
+</svg>
